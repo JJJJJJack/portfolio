@@ -1,0 +1,38 @@
+.animation-container {
+  rotate: -10deg;
+  transition: 1s 0.15s ease-out;
+
+  > :nth-child(even) {
+    translate: -428px;
+    animation: to-left infinite 60s linear;
+  }
+  > :nth-child(odd) {
+    translate: -428px;
+    animation: to-left infinite 60s linear reverse;
+  }
+}
+
+.appear {
+  opacity: 0.07;
+}
+
+.disappear {
+  opacity: 0;
+}
+
+@keyframes to-left {
+  0% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+  2% {
+    opacity: 1;
+  }
+  98% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(428px);
+    opacity: 0;
+  }
+}

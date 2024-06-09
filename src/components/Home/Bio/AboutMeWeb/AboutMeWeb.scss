@@ -1,0 +1,15 @@
+.job-icons-row > img {
+  max-width: 7.5rem;
+  transition: filter 300ms;
+  will-change: transform;
+
+  @media (max-width: 768px) {
+    height: 4rem;
+    max-width: 7rem;
+    flex-basis: 50%;
+  }
+
+  &:hover {
+    filter: drop-shadow(0 0 0.7em #4b54ffac);
+  }
+}
