@@ -1,7 +1,8 @@
 # My Portfolio Website
 
 ## Description
-This is my personal portfolio website. It is a static website built using React with Typescript (TSX) + SCSS and ViteJS + SWC. 
+This is my personal portfolio website. It is a static website built using React with Typescript (TSX) + SCSS and ViteJS + SWC.  
+
 [https://jackk.in](https://jackk.in)
 
 ## Features
