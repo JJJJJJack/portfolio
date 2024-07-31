@@ -5,10 +5,17 @@ type GlassCardProps = {
   textAlign?: "text-center" | "text-left" | "text-right";
   /** animate-r is causing lag, replaced with animate-l */
   entrance?: `animate-${"l" | "r" | "t" | "b"}`;
+  /** can't click hrefs due to :before,:after covering the content */
+  tmpDisableGlassGlow?: true;
   children: React.ReactNode;
 };
 
-export default function GlassCard({ textAlign = "text-left", entrance, children }: GlassCardProps) {
+export default function GlassCard({
+  textAlign = "text-left",
+  entrance,
+  tmpDisableGlassGlow,
+  children,
+}: GlassCardProps) {
   const description = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
@@ -38,7 +45,9 @@ export default function GlassCard({ textAlign = "text-left", entrance, children 
   return (
     <span
       ref={description}
-      className={`${textAlign} card-glass p-8 text-gray-300 opacity-0 md:max-w-[75%]`}
+      className={`${
+        tmpDisableGlassGlow ? "" : "glass-glow"
+      } ${textAlign} card-glass p-8 text-gray-300 opacity-0 md:max-w-[75%]`}
       onMouseMove={e => {
         const card = e.target as HTMLElement;
         const rect = card.getBoundingClientRect(),

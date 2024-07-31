@@ -6,30 +6,16 @@
   border: 1px solid rgba(255, 255, 255, 0.18);
   background-blend-mode: color-burn;
   position: relative;
-  cursor: pointer;
 
   :hover::before {
     opacity: 1;
   }
 
-  ::before,
-  ::after {
-    border-radius: inherit;
-    content: "";
-    height: 100%;
-    left: 0px;
-    opacity: 0;
-    position: absolute;
-    top: 0px;
-    transition: opacity 500ms;
-    width: 100%;
-  }
-
   ::before {
     border-radius: 30px;
     background: radial-gradient(
-      6000px circle at var(--mouse-x) var(--mouse-y),
-      rgba(255, 255, 255, 0.01),
+      1500px circle at calc(var(--mouse-x)) calc(var(--mouse-y) + 30vh),
+      rgba(255, 255, 255, 0.07),
       transparent 40%
     );
     z-index: 3;
@@ -55,6 +41,21 @@
   //   position: absolute;
   //   z-index: 2;
   // }
+}
+
+.glass-glow {
+  ::before,
+  ::after {
+        border-radius: inherit;
+        content: "";
+        height: 100%;
+        left: 0px;
+        opacity: 0;
+        position: absolute;
+        top: 0px;
+        transition: opacity 500ms;
+        width: 100%;
+  }
 }
 
 .card {

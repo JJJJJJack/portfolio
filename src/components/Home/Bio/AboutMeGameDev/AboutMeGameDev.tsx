@@ -30,7 +30,7 @@ export default function AboutMeGameDev() {
 
   return (
     <article ref={aboutMeGameDev} className="flex h-screen w-full snap-start flex-col items-center justify-center">
-      <GlassCard entrance="animate-l">
+      <GlassCard entrance="animate-l" tmpDisableGlassGlow>
         <p className="mb-2 w-full text-center text-3xl text-yellow-500 md:text-4xl">
           I recently got into game dev too!
         </p>
@@ -45,7 +45,11 @@ export default function AboutMeGameDev() {
           </a>
         </p>
         <p>
-          <a className="text-blue-600 underline" href="https://globalgamejam.org/users/jjjack" target="_blank">
+          <a
+            className="bg-transparent text-blue-600 underline"
+            href="https://globalgamejam.org/users/jjjack"
+            target="_blank"
+          >
             We are eager partecipants of the Global Game Jam 🎮
           </a>
         </p>
