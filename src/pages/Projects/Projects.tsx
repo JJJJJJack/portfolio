@@ -28,8 +28,8 @@ export default function Projects() {
       />
       <article className="flex h-screen flex-col justify-evenly p-6 pt-10 md:p-8">
         <header className="flex w-full flex-col gap-4 text-center">
-          <h1 className="text-center">Projects</h1>
-          <p>
+          <h1 className="animate-l text-center">Projects</h1>
+          <p className="animate-r">
             Here is a list of personal projects I'm having fun working on recently, source code on my&nbsp;
             <a className="text-blue-600 underline" href="https://github.com/JJJJJJack" target="_blank">
               GitHub
