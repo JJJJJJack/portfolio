@@ -1,13 +1,14 @@
 import { useContext, useEffect, useRef } from "react";
 import portrait from "../../../assets/images/reduce.jpg";
+import linksvg from "../../../assets/svgs/link.svg";
 import SocialNav from "../../SocialNav/SocialNav";
 import { ViewCtx } from "../../../App";
-// import Button from "../../Button/Button";
-// import { useNavigate } from "react-router-dom";
+import Button from "../../Button/Button";
+import { useNavigate } from "react-router-dom";
 
 export default function ProfileTitle() {
   const profileTitle = useRef<HTMLDivElement>(null);
-  //   const navigate = useNavigate();
+  const navigate = useNavigate();
 
   const {
     currentSectionState: [_, setCurrentSection],
@@ -33,9 +34,9 @@ export default function ProfileTitle() {
     }
   }, []);
 
-  //   const goToWebRoute = () => {
-  //     navigate("/web");
-  //   };
+  const goToProjects = () => {
+    navigate("/projects");
+  };
 
   return (
     <section className="flex h-screen snap-start flex-col justify-center">
@@ -48,7 +49,7 @@ export default function ProfileTitle() {
             Hi, I'm <br />
             Gabriele Ballicu
           </h1>
-          <p className="select-none text-center text-lg text-blue-800 md:text-end md:text-blue-300 md:mix-blend-overlay">
+          <p className="select-none text-center text-lg text-blue-800 opacity-70 md:text-end">
             (my friends call me Jack tho)
           </p>
         </header>
@@ -61,11 +62,14 @@ export default function ProfileTitle() {
           <SocialNav />
         </aside>
       </div>
-      {/* <footer className="w-full">
-        <Button>
-          <a onClick={goToWebRoute}>Web</a>
+      <footer className="w-full text-center">
+        <Button className="animate-appear">
+          <a className="flex flex-nowrap gap-2" onClick={goToProjects}>
+            <img src={linksvg} alt="link" />
+            Projects
+          </a>
         </Button>
-      </footer> */}
+      </footer>
     </section>
   );
 }

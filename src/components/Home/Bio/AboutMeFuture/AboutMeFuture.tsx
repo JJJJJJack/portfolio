@@ -1,5 +1,5 @@
 import { useContext, useEffect, useRef } from "react";
-import GlassCard from "../../../Card/GlassCard";
+import GlassCard from "../../../GlassCard/GlassCard";
 import { ViewCtx } from "../../../../App";
 
 export default function AboutMeFuture() {

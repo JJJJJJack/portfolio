@@ -1,2 +1,2 @@
 type BioSubSections = "LowLevel" | "Web" | "GameDev" | "Future" | "Credits";
-export type Sections = "ProfileTitle" | `${"Bio"}-${BioSubSections}` | "NoSnapContent";
+export type Sections = "Projects" | "ProfileTitle" | `${"Bio"}-${BioSubSections}` | "NoSnapContent";

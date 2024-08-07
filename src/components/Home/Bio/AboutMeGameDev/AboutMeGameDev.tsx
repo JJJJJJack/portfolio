@@ -1,6 +1,6 @@
 import { useContext, useEffect, useRef } from "react";
 import { ViewCtx } from "../../../../App";
-import GlassCard from "../../../Card/GlassCard";
+import GlassCard from "../../../GlassCard/GlassCard";
 
 export default function AboutMeGameDev() {
   const aboutMeGameDev = useRef<HTMLDivElement>(null);
@@ -41,7 +41,7 @@ export default function AboutMeGameDev() {
             href="https://www.lazioinnova.it/news/premiati-i-vincitori-di-hack-the-roll/"
             target="_blank"
           >
-            We even won a game jam once!🎉
+            We even won a game jam!🎉
           </a>
         </p>
         <p>
@@ -50,7 +50,7 @@ export default function AboutMeGameDev() {
             href="https://globalgamejam.org/users/jjjack"
             target="_blank"
           >
-            We are eager partecipants of the Global Game Jam 🎮
+            We are eager participants of the Global Game Jam 🎮
           </a>
         </p>
         <p>

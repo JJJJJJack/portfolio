@@ -1,3 +1,15 @@
 .Button-styling {
-  background: linear-gradient(90deg, #ffc107 0%, #ff9800 100%);
+  background: linear-gradient(180deg, #ffc107 0%, #ff9800 100%);
+  flex: auto;
+  flex-wrap: nowrap;
+  transition: 0.4s;
+
+  &:hover {
+    opacity: 0.75;
+  }
+
+  &:active {
+    transition: 0s;
+    opacity: 0.4;
+  }
 }

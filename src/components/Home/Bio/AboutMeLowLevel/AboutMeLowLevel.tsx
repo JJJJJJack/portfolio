@@ -1,7 +1,7 @@
 import { useContext, useEffect, useRef } from "react";
 import { ViewCtx } from "../../../../App";
 import { katakana } from "../../../../utils/characters";
-import GlassCard from "../../../Card/GlassCard";
+import GlassCard from "../../../GlassCard/GlassCard";
 import "./AboutMeLowLevel.scss";
 
 export default function AboutMeLowLevel() {

@@ -37,11 +37,9 @@ export default function Home() {
   }, []);
 
   return (
-    <>
-      <section ref={snappedContent} className="h-screen w-full snap-y snap-mandatory overflow-x-hidden px-2">
-        <ProfileTitle />
-        <Bio />
-      </section>
-    </>
+    <section ref={snappedContent} className="h-screen w-full snap-y snap-mandatory overflow-x-hidden px-2">
+      <ProfileTitle />
+      <Bio />
+    </section>
   );
 }

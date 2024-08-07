@@ -4,7 +4,7 @@ import docker from "../../../../assets/svgs/docker.svg";
 import golang from "../../../../assets/svgs/golang.svg";
 import react from "../../../../assets/svgs/react.svg";
 import typescript from "../../../../assets/svgs/typescript.svg";
-import GlassCard from "../../../Card/GlassCard";
+import GlassCard from "../../../GlassCard/GlassCard";
 import "./AboutMeWeb.scss";
 
 export default function AboutMeWeb() {

@@ -3,7 +3,7 @@ import { Route, Routes } from "react-router-dom";
 import { Sections } from "./App.types";
 import Home from "./pages/Home/Home";
 import Layout from "./pages/Layout/Layout";
-// import Web from "./pages/Web/Web";
+import Projects from "./pages/Projects/Projects";
 
 export const ViewCtx = createContext<{
   currentSectionState: [Sections, Dispatch<SetStateAction<Sections>>];
@@ -21,7 +21,7 @@ function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
-          {/* <Route path="/web" element={<Web />} /> */}
+          <Route path="/projects" element={<Projects />} />
         </Route>
       </Routes>
     </ViewCtx.Provider>

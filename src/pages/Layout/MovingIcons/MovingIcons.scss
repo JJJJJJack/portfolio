@@ -1,6 +1,7 @@
 .animation-container {
   rotate: -10deg;
   transition: 1s 0.15s ease-out;
+  pointer-events: none;
 
   > :nth-child(even) {
     translate: -428px;
