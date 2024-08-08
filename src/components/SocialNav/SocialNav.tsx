@@ -10,13 +10,13 @@ type SocialNavProps = {
 export default function SocialNav({ vertical, align = "self-center" }: SocialNavProps) {
   return (
     <nav className={`${vertical && "flex-col"} ${align} flex w-fit items-center gap-6`}>
-      <a href="https://www.linkedin.com/in/gabriele-ballicu/" target="_blank">
+      <a className="clickable" href="https://www.linkedin.com/in/gabriele-ballicu/" target="_blank">
         <img src={linkedin} width={60} alt="linkedin" />
       </a>
-      <a href="https://github.com/JJJJJJack/" target="_blank">
+      <a className="clickable" href="https://github.com/JJJJJJack/" target="_blank">
         <img src={github} width={50} alt="github" />
       </a>
-      <a href="mailto: gabrieleballicu@protonmail.com" target="_blank">
+      <a className="clickable" href="mailto: gabrieleballicu@protonmail.com" target="_blank">
         <img src={email} width={60} alt="email" />
       </a>
     </nav>
