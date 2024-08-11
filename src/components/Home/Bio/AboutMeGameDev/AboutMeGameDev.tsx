@@ -37,7 +37,7 @@ export default function AboutMeGameDev() {
         <p>Along with my team, we crash into game jams or fiddle with personal projects...</p>
         <p>
           <a
-            className="text-blue-600 underline"
+            className="clickable text-amber-600 underline"
             href="https://www.lazioinnova.it/news/premiati-i-vincitori-di-hack-the-roll/"
             target="_blank"
           >
@@ -46,7 +46,7 @@ export default function AboutMeGameDev() {
         </p>
         <p>
           <a
-            className="bg-transparent text-blue-600 underline"
+            className="clickable bg-transparent text-amber-600 underline"
             href="https://globalgamejam.org/users/jjjack"
             target="_blank"
           >

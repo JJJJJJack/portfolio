@@ -22,7 +22,7 @@ export default function Projects() {
     <section className="h-screen w-full px-2">
       <img
         src={chevronleft}
-        className="clickable fixed animate-r cursor-pointer md:m-10 md:h-20"
+        className="clickable fixed m-10 h-10 animate-r cursor-pointer md:h-20"
         color="white"
         onClick={goToHome}
       />
@@ -31,7 +31,7 @@ export default function Projects() {
           <h1 className="animate-l text-center">Projects</h1>
           <p className="animate-r">
             Here is a list of personal projects I'm having fun working on recently, source code on my&nbsp;
-            <a className="text-blue-600 underline" href="https://github.com/JJJJJJack" target="_blank">
+            <a className="clickable text-amber-600 underline" href="https://github.com/JJJJJJack" target="_blank">
               GitHub
             </a>
           </p>
