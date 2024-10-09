@@ -7,6 +7,7 @@ import Projects from "./pages/Projects/Projects";
 
 export const ViewCtx = createContext<{
   currentSectionState: [Sections, Dispatch<SetStateAction<Sections>>];
+  isTouchSceen: boolean;
 }>(null);
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
     <ViewCtx.Provider
       value={{
         currentSectionState: [currentSection, setCurrentSection],
+        isTouchSceen: "ontouchstart" in window,
       }}
     >
       <Routes>

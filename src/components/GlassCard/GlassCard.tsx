@@ -47,7 +47,7 @@ export default function GlassCard({
       ref={description}
       className={`${
         tmpDisableGlassGlow ? "" : "glass-glow"
-      } ${textAlign} card-glass p-4 text-gray-300 opacity-0 md:max-w-[700px] md:p-8`}
+      } ${textAlign} card-glass p-4 text-gray-300 opacity-0 md:max-w-[800px] md:p-8`}
       onMouseMove={e => {
         const card = e.target as HTMLElement;
         const rect = card.getBoundingClientRect(),

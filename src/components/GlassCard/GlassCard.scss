@@ -48,15 +48,15 @@ $glass-glow-border-radius: 30px;
 .glass-glow {
   ::before,
   ::after {
-        border-radius: $glass-glow-border-radius;
-        content: "";
-        height: 100%;
-        left: 0px;
-        opacity: 0;
-        position: absolute;
-        top: 0px;
-        transition: opacity 500ms;
-        width: 100%;
+    border-radius: $glass-glow-border-radius;
+    content: "";
+    height: 100%;
+    left: 0px;
+    opacity: 0;
+    position: absolute;
+    top: 0px;
+    transition: opacity 500ms;
+    width: 100%;
   }
 }
 

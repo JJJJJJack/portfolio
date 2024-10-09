@@ -47,7 +47,10 @@ export default function AboutMeCredits() {
           </p>
           <p>
             I believe in the power of sharing knowledge and learning through each others experiences and helping each
-            other above everything. <code className="text-red-400">Together we can achieve anything.</code>
+            other above everything.
+          </p>
+          <p>
+            <code className="text-red-400">Together we can achieve anything.</code>
           </p>
         </section>
       </GlassCard>
