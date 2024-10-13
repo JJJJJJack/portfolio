@@ -7,6 +7,7 @@ type GlassCardProps = {
   entrance?: `animate-${"l" | "r" | "t" | "b"}`;
   /** can't click hrefs due to :before,:after covering the content */
   tmpDisableGlassGlow?: true;
+  className?: string;
   children: React.ReactNode;
 };
 
@@ -14,6 +15,7 @@ export default function GlassCard({
   textAlign = "text-left",
   entrance,
   tmpDisableGlassGlow,
+  className,
   children,
 }: GlassCardProps) {
   const description = useRef<HTMLSpanElement>(null);
@@ -35,6 +37,7 @@ export default function GlassCard({
       observer.observe(description.current);
     }
 
+    // Cleanup function to remove the event listeners
     return () => {
       if (description.current) {
         observer.unobserve(description.current);
@@ -47,12 +50,12 @@ export default function GlassCard({
       ref={description}
       className={`${
         tmpDisableGlassGlow ? "" : "glass-glow"
-      } ${textAlign} card-glass p-4 text-gray-300 opacity-0 md:max-w-[800px] md:p-8`}
+      } ${textAlign} ${className} card-glass p-4 text-gray-300 opacity-0 md:max-w-[800px] md:p-8`}
       onMouseMove={e => {
         const card = e.target as HTMLElement;
-        const rect = card.getBoundingClientRect(),
-          x = e.clientX - rect.left,
-          y = e.clientY - rect.top;
+        const rect = card.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
         card.style.setProperty("--mouse-x", `${x}px`);
         card.style.setProperty("--mouse-y", `${y}px`);
       }}

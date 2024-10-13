@@ -61,7 +61,7 @@ export default function AboutMeLowLevel() {
                   clearInterval(binaryRoll);
                   span.innerText = savedText;
                 },
-                (2000 + i * 50) * 0
+                2000 + i * 50
               );
             });
 
@@ -69,7 +69,7 @@ export default function AboutMeLowLevel() {
               return;
             }
 
-            // these are used to prevent the text from wrapping between characters and not at word endings
+            // multiple paragraphs are used to prevent the text from wrapping between characters and not at word endings
             textspans2.current.forEach((span, i, arr) => {
               if (arr[i].textContent === " " && arr[i + 1].textContent === " ") {
                 for (let j = i; arr[j + 1].textContent === " "; j++) {
@@ -115,7 +115,7 @@ export default function AboutMeLowLevel() {
                   clearInterval(binaryRoll);
                   span.innerText = savedText;
                 },
-                8000 + i * 50
+                8100 + i * 50
               );
             });
           }
@@ -135,49 +135,63 @@ export default function AboutMeLowLevel() {
   }, []);
 
   return (
-    <article ref={aboutMeLowLevel} className="flex h-screen w-full snap-start flex-col items-center justify-center">
-      <GlassCard entrance="animate-l">
-        <span className="flex flex-wrap">
-          <p className="matrix-shadow mb-2 w-full text-center text-3xl text-green-500 md:text-4xl">
-            I'm a hardcore developer
-          </p>
-          {isTouchSceen ? (
-            <>
-              <p>
-                {`I like diving into new topic and discover every little niche. Now I'm`.split("").map((p, i) => (
-                  <span className="matrix-shadow text-green-500" ref={el => (textspans1.current[i] = el)} key={"a" + i}>
-                    {p}
-                  </span>
-                ))}
-              </p>
-              <p>
-                {`dedicated to learn the in-depths of computer basis through`.split("").map((p, i) => (
-                  <span className="matrix-shadow text-green-500" ref={el => (textspans2.current[i] = el)} key={"b" + i}>
-                    {p}
-                  </span>
-                ))}
-              </p>
-              <p>
-                {`C/C++ development and juicing out the source code from asm`.split("").map((p, i) => (
-                  <span className="matrix-shadow text-green-500" ref={el => (textspans3.current[i] = el)} key={"c" + i}>
-                    {p}
-                  </span>
-                ))}
-              </p>
-            </>
-          ) : (
-            <>
-              {`I like diving into new topic and discover every little niche. Now I'm dedicated to learn the in-depths of computer basis through C/C++ development and juicing out the source code from asm`
+    <article
+      ref={aboutMeLowLevel}
+      className="resize-smooth flex h-screen w-full snap-start flex-col items-center justify-center"
+    >
+      <div className="flex h-[300px] flex-col items-start justify-start">
+        <GlassCard entrance="animate-l">
+          <span className="flex flex-wrap">
+            <p className="matrix-shadow mb-2 w-full text-center text-3xl text-green-500 md:text-4xl">
+              I'm a hardcore developer
+            </p>
+            <p>
+              {(isTouchSceen
+                ? `I like diving into new topic and discover every little niche. Now I'm dedicated to learn the in-depths of computer basis through C/C++ development and juicing out the source code from asm`
+                : `I like diving into new topic and discover every little niche. Now I'm`
+              )
                 .split("")
                 .map((p, i) => (
-                  <span className="matrix-shadow text-green-500" ref={el => (textspans1.current[i] = el)} key={"a" + i}>
+                  <span
+                    className="matrix-shadow text-green-500"
+                    ref={el => (textspans1.current[i] = el)}
+                    key={"rollingChars1" + i}
+                  >
                     {p}
                   </span>
                 ))}
-            </>
-          )}
-        </span>
-      </GlassCard>
+            </p>
+            {isTouchSceen ? (
+              ""
+            ) : (
+              <>
+                <p>
+                  {`dedicated to learn the in-depths of computer basis through`.split("").map((p, i) => (
+                    <span
+                      className="matrix-shadow text-green-500"
+                      ref={el => (textspans2.current[i] = el)}
+                      key={"rollingChars2" + i}
+                    >
+                      {p}
+                    </span>
+                  ))}
+                </p>
+                <p>
+                  {`C/C++ development and juicing out the source code from asm`.split("").map((p, i) => (
+                    <span
+                      className="matrix-shadow text-green-500"
+                      ref={el => (textspans3.current[i] = el)}
+                      key={"rollingChars3" + i}
+                    >
+                      {p}
+                    </span>
+                  ))}
+                </p>
+              </>
+            )}
+          </span>
+        </GlassCard>
+      </div>
     </article>
   );
 }
