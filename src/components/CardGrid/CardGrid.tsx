@@ -4,6 +4,7 @@ import brainfuck from "../../assets/images/brainfuck.jpg";
 import binfo from "../../assets/images/binfo.jfif";
 import portfolio from "../../assets/images/portfolio.jfif";
 import botnewsansa from "../../assets/images/botnewsansa.jfif";
+import golang from "../../assets/svgs/golang.svg";
 import Card from "./Card";
 
 export default function CardGrid() {
@@ -44,6 +45,12 @@ export default function CardGrid() {
         href={"https://github.com/JJJJJJack/portfolio"}
         title={"Portfolio website"}
         description={"This website whole project"}
+      />
+      <Card
+        src={golang}
+        href={"https://github.com/JJJJJJack/go-template-docx"}
+        title={"go-template-docx"}
+        description={"A golang module to generate docx files from templates, released with binaries"}
       />
     </div>
   );

@@ -19,7 +19,7 @@ export default function Projects() {
   };
 
   return (
-    <section className="h-screen w-full px-2">
+    <section className="h-full w-full px-2">
       <img
         src={chevronleft}
         className="clickable fixed m-10 h-10 animate-r cursor-pointer md:h-20"
@@ -30,7 +30,7 @@ export default function Projects() {
         <header className="flex w-full flex-col gap-4 text-center">
           <h1 className="animate-l text-center">Projects</h1>
           <p className="animate-r">
-            Here is a list of personal projects I'm having fun working on recently, source code on my&nbsp;
+            Here is a list of my public personal projects, source code on my&nbsp;
             <a className="clickable text-amber-600 underline" href="https://github.com/JJJJJJack" target="_blank">
               GitHub
             </a>

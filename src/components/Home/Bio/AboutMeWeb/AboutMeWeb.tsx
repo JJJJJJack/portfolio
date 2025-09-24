@@ -36,13 +36,11 @@ export default function AboutMeWeb() {
   return (
     <article ref={aboutMeWeb} className="flex h-screen w-full snap-start flex-col items-center justify-center md:p-0">
       <GlassCard entrance="animate-l">
-        <p className="mb-2 w-full text-center text-3xl text-yellow-500 md:text-4xl">
-          I'm experienced on Web Development
-        </p>
+        <p className="mb-2 w-full text-center text-3xl text-yellow-500 md:text-4xl">Full-Stack</p>
         <p>
-          React, Typescript, Javascript, Python, Golang. As a fullstack developer, I enjoy the freedom to apply all the
-          programming paradigms as needed, in order to accomplish a more readable and pleasant codebase to work with,
-          for everyone.
+          React, Typescript, Javascript, Python, Golang, developing with different programming languages, I enjoy the
+          freedom to apply all the programming paradigms as needed, in order to accomplish a more readable and pleasant
+          codebase to work with, for everyone.
         </p>
         <p> My main job now:</p>
         <p className="job-icons-row my-2 flex flex-row flex-wrap justify-evenly gap-y-4">

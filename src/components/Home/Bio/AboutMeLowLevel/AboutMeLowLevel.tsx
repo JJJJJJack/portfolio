@@ -4,6 +4,8 @@ import { katakana } from "../../../../utils/characters";
 import GlassCard from "../../../GlassCard/GlassCard";
 import "./AboutMeLowLevel.scss";
 
+const APPEARING_SPEED = 20; // ms per character
+
 export default function AboutMeLowLevel() {
   const aboutMeLowLevel = useRef<HTMLDivElement>(null);
   const textspans1 = useRef<HTMLSpanElement[]>([]);
@@ -61,7 +63,7 @@ export default function AboutMeLowLevel() {
                   clearInterval(binaryRoll);
                   span.innerText = savedText;
                 },
-                2000 + i * 50
+                2000 + i * APPEARING_SPEED
               );
             });
 
@@ -91,7 +93,7 @@ export default function AboutMeLowLevel() {
                   clearInterval(binaryRoll);
                   span.innerText = savedText;
                 },
-                5300 + i * 50
+                3000 + i * APPEARING_SPEED
               );
             });
             textspans3.current.forEach((span, i, arr) => {
@@ -115,7 +117,7 @@ export default function AboutMeLowLevel() {
                   clearInterval(binaryRoll);
                   span.innerText = savedText;
                 },
-                8100 + i * 50
+                4000 + i * APPEARING_SPEED
               );
             });
           }
@@ -147,8 +149,8 @@ export default function AboutMeLowLevel() {
             </p>
             <p>
               {(isTouchSceen
-                ? `I like diving into new topic and discover every little niche. Now I'm dedicated to learn the in-depths of computer basis through C/C++ development and juicing out the source code from asm`
-                : `I like diving into new topic and discover every little niche. Now I'm`
+                ? `I like diving into new topic and discover every little niche. Now I'm dedicated to learn the best hacks and tricks of computer engineering through C/C++ development and juicing out the source code from asm`
+                : `I like diving into new topic and discover every little niche. I'm all`
               )
                 .split("")
                 .map((p, i) => (
@@ -166,7 +168,7 @@ export default function AboutMeLowLevel() {
             ) : (
               <>
                 <p>
-                  {`dedicated to learn the in-depths of computer basis through`.split("").map((p, i) => (
+                  {`into learning the hacks and tricks of computer engineering`.split("").map((p, i) => (
                     <span
                       className="matrix-shadow text-green-500"
                       ref={el => (textspans2.current[i] = el)}
@@ -177,7 +179,7 @@ export default function AboutMeLowLevel() {
                   ))}
                 </p>
                 <p>
-                  {`C/C++ development and juicing out the source code from asm`.split("").map((p, i) => (
+                  {`through C/C++ development and study compilers from asm`.split("").map((p, i) => (
                     <span
                       className="matrix-shadow text-green-500"
                       ref={el => (textspans3.current[i] = el)}
