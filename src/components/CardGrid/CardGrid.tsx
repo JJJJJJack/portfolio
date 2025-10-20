@@ -5,6 +5,7 @@ import binfo from "../../assets/images/binfo.jfif";
 import portfolio from "../../assets/images/portfolio.jfif";
 import botnewsansa from "../../assets/images/botnewsansa.jfif";
 import golang from "../../assets/svgs/golang.svg";
+import kryvea from "../../assets/svgs/kryvea.svg";
 import Card from "./Card";
 
 export default function CardGrid() {
@@ -22,6 +23,18 @@ export default function CardGrid() {
   }, []);
   return (
     <div id="cards">
+      <Card
+        src={kryvea}
+        href={"https://github.com/Alexius22/kryvea"}
+        title={"Kryvea"}
+        description={"A penetration testing reporting platform for offensive security professionals."}
+      />
+      <Card
+        src={golang}
+        href={"https://github.com/JJJJJJack/go-template-docx"}
+        title={"go-template-docx"}
+        description={"A golang module to generate docx files from templates, released with binaries"}
+      />
       <Card
         src={brainfuck}
         href={"https://github.com/JJJJJJack/brainfuck-interpreter"}
@@ -45,12 +58,6 @@ export default function CardGrid() {
         href={"https://github.com/JJJJJJack/portfolio"}
         title={"Portfolio website"}
         description={"This website whole project"}
-      />
-      <Card
-        src={golang}
-        href={"https://github.com/JJJJJJack/go-template-docx"}
-        title={"go-template-docx"}
-        description={"A golang module to generate docx files from templates, released with binaries"}
       />
     </div>
   );
